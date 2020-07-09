@@ -5,10 +5,24 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 2.4
 
+Metrics/MethodLength:
+  Enabled: false
+
+Packaging/RelativeRequireToLib:
+  Include:
+    - spec/**/*.rb
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/IfInsideElse:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
 Style/StringLiterals:
-  Enabled: true
   EnforcedStyle: double_quotes
 
 Style/StringLiteralsInInterpolation:
-  Enabled: true
   EnforcedStyle: double_quotes
