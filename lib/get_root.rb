@@ -2,8 +2,13 @@
 
 require "get_root/version"
 
-module GetRoot
+module GetRoot # :nodoc:
   class << self
+    # This method shows the path of the root directory
+    # of a git project.
+    # There, strictly, needs to be a git repository,
+    # otherwise this won't work, because it essentially
+    # looks for the presence of a `.git` directory.
     def path(count = 0, relative_path = +".", root = nil)
       if count > 15
         root = File.expand_path(relative_path)
